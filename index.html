@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>誕生日</title>
+<title>akanehppd</title>
 <style>
 body {
   margin: 0;
@@ -181,7 +181,7 @@ canvas { position: absolute; inset:0; pointer-events:none; z-index:1; }
 <script>
 // Mật khẩu
 let input="";
-const password="092996"; 
+const password="19960929"; 
 const display=document.getElementById("display");
 
 // Bàn phím
@@ -195,13 +195,13 @@ function buildPad(){
 function makeKey(n){
   const b=document.createElement("button");
   b.className="btn"; b.textContent=n;
-  b.onclick=()=>{ if(input.length<6){ input+=n; updateDisplay(); checkPwd(); } };
+  b.onclick=()=>{ if(input.length<8){ input+=n; updateDisplay(); checkPwd(); } };
   return b;
 }
-function updateDisplay(){ display.textContent=input.padEnd(6,"●"); }
+function updateDisplay(){ display.textContent=input.padEnd(8,"●"); }
 function resetInput(){ input=""; updateDisplay(); }
 function checkPwd(){
-  if(input.length>=6){
+  if(input.length>=8){
     if(input===password){ showSuccess(); }
     else { 
       display.animate([{transform:"translateX(-6px)"},{transform:"translateX(6px)"},{transform:"translateX(0)"}],{duration:300}); 
@@ -220,7 +220,7 @@ function showSuccess(){
   setTimeout(()=>{
     document.getElementById("baka").style.display="block";
     document.querySelector("#successPage h1").style.display="none";
-  },2000);
+  },4000);
 }
 const canvas=document.getElementById("fireworks");
 const ctx=canvas.getContext("2d");
