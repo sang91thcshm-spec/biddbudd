@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>山下の誕生日</title>
+<title>茜の誕生日</title>
 <style>
 body {
   margin: 0;
@@ -178,7 +178,7 @@ canvas { position: absolute; inset:0; pointer-events:none; z-index:1; }
         </div>
       </div>
     </div>
-</div>  
+</div>
 
 <!-- Success Page -->
 <div class="container" id="successPage">
@@ -194,7 +194,7 @@ canvas { position: absolute; inset:0; pointer-events:none; z-index:1; }
 <script>
 // Mật khẩu
 let input="";
-const password="19960929"
+const password="00000000"; 
 const display=document.getElementById("display");
 
 // Bàn phím
@@ -218,11 +218,11 @@ function checkPwd(){
     if(input===password){ showSuccess(); }
     else {
       // Hiện chữ 馬鹿 to trên màn hình
-  const bakaDiv = document.getElementById("bakaWrong");
+      const bakaDiv = document.getElementById("bakaWrong");
       bakaDiv.style.display = "block";
-  setTimeout(()=>{ bakaDiv.style.display = "none"; }, 1200);
-  display.animate([{transform:"translateX(-6px)"},{transform:"translateX(6px)"},{transform:"translateX(0)"}],{duration:300});
-  resetInput();
+      setTimeout(()=>{ bakaDiv.style.display = "none"; }, 1200);
+      display.animate([{transform:"translateX(-6px)"},{transform:"translateX(6px)"},{transform:"translateX(0)"}],{duration:300});
+      resetInput();
     }
   }
 }
